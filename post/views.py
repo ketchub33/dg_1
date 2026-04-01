@@ -60,7 +60,7 @@ def move_to_trash(request, pk):
 @login_required
 def archive_message(request, pk):
     message = get_object_or_404(Message, id=pk, recipient=request.user)
-    message.is_archived = True #
+    message.is_archived = True 
     message.save()
     return redirect('inbox')
 

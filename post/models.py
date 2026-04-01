@@ -8,7 +8,6 @@ class Message(models.Model):
     body = models.TextField(verbose_name="Текст письма")
     created_at = models.DateTimeField(auto_now_add=True)
     
-    # Флаги состояний
     is_read = models.BooleanField(default=False)
     is_archived = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
